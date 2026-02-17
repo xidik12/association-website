@@ -18,26 +18,21 @@ const navCta = document.querySelector('.nav-cta');
 
 if (navSticky) {
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) {
-            navSticky.classList.add('scrolled');
-            if (navLogo) {
-                navLogo.classList.remove('opacity-0', '-translate-x-4', 'pointer-events-none');
-                navLogo.classList.add('opacity-100', 'translate-x-0');
-            }
-            if (navCta) {
-                navCta.classList.remove('opacity-0', 'translate-x-4', 'pointer-events-none');
-                navCta.classList.add('opacity-100', 'translate-x-0');
-            }
-        } else {
-            navSticky.classList.remove('scrolled');
-            if (navLogo) {
-                navLogo.classList.add('opacity-0', '-translate-x-4', 'pointer-events-none');
-                navLogo.classList.remove('opacity-100', 'translate-x-0');
-            }
-            if (navCta) {
-                navCta.classList.add('opacity-0', 'translate-x-4', 'pointer-events-none');
-                navCta.classList.remove('opacity-100', 'translate-x-0');
-            }
+        const scrolled = window.scrollY > 200;
+        navSticky.classList.toggle('scrolled', scrolled);
+        if (navLogo) {
+            navLogo.classList.toggle('opacity-0', !scrolled);
+            navLogo.classList.toggle('-translate-x-4', !scrolled);
+            navLogo.classList.toggle('pointer-events-none', !scrolled);
+            navLogo.classList.toggle('opacity-100', scrolled);
+            navLogo.classList.toggle('translate-x-0', scrolled);
+        }
+        if (navCta) {
+            navCta.classList.toggle('opacity-0', !scrolled);
+            navCta.classList.toggle('translate-x-4', !scrolled);
+            navCta.classList.toggle('pointer-events-none', !scrolled);
+            navCta.classList.toggle('opacity-100', scrolled);
+            navCta.classList.toggle('translate-x-0', scrolled);
         }
     });
 }
@@ -50,14 +45,32 @@ if (heroSlides.length > 1) {
         heroSlides[currentSlide].style.opacity = '0';
         currentSlide = (currentSlide + 1) % heroSlides.length;
         heroSlides[currentSlide].style.opacity = '1';
-    }, 4000);
+    }, 5000);
 }
 
-// Intersection Observer for fade-in animations
+// Counter animation
+function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'));
+    const suffix = el.getAttribute('data-suffix') || '';
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        el.textContent = Math.floor(current).toLocaleString() + suffix;
+    }, 16);
+}
+
+// Intersection Observer for animations + counters
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animate-fade-in-up');
+            entry.target.querySelectorAll('[data-target]').forEach(animateCounter);
             observer.unobserve(entry.target);
         }
     });
