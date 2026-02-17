@@ -11,22 +11,49 @@ if (mobileToggle && mobileMenu) {
     });
 }
 
-// Navbar scroll effect
-const nav = document.querySelector('nav');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        nav.classList.add('shadow-lg');
-    } else {
-        nav.classList.remove('shadow-lg');
-    }
-});
+// Sticky nav — show logo + CTA on scroll
+const navSticky = document.querySelector('.nav-sticky');
+const navLogo = document.querySelector('.nav-logo');
+const navCta = document.querySelector('.nav-cta');
+
+if (navSticky) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            navSticky.classList.add('scrolled');
+            if (navLogo) {
+                navLogo.classList.remove('opacity-0', '-translate-x-4', 'pointer-events-none');
+                navLogo.classList.add('opacity-100', 'translate-x-0');
+            }
+            if (navCta) {
+                navCta.classList.remove('opacity-0', 'translate-x-4', 'pointer-events-none');
+                navCta.classList.add('opacity-100', 'translate-x-0');
+            }
+        } else {
+            navSticky.classList.remove('scrolled');
+            if (navLogo) {
+                navLogo.classList.add('opacity-0', '-translate-x-4', 'pointer-events-none');
+                navLogo.classList.remove('opacity-100', 'translate-x-0');
+            }
+            if (navCta) {
+                navCta.classList.add('opacity-0', 'translate-x-4', 'pointer-events-none');
+                navCta.classList.remove('opacity-100', 'translate-x-0');
+            }
+        }
+    });
+}
+
+// Hero slideshow
+const heroSlides = document.querySelectorAll('.hero-slide');
+if (heroSlides.length > 1) {
+    let currentSlide = 0;
+    setInterval(() => {
+        heroSlides[currentSlide].style.opacity = '0';
+        currentSlide = (currentSlide + 1) % heroSlides.length;
+        heroSlides[currentSlide].style.opacity = '1';
+    }, 4000);
+}
 
 // Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -34,8 +61,6 @@ const observer = new IntersectionObserver((entries) => {
             observer.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
-});
+document.querySelectorAll('section').forEach(section => observer.observe(section));
