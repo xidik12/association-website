@@ -3,99 +3,353 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charter - Professional Association of Cambodia</title>
+    <title>Charter & Governance - Professional Association of Cambodia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
-            theme: { extend: { colors: { primary: '#1e3a5f', secondary: '#2c7be5', accent: '#f5a623', dark: '#0f1c2e' }, fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0c2340',
+                        secondary: '#1a5276',
+                        accent: '#c19a3e',
+                        dark: '#091728',
+                        light: '#f8f9fb',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['"DM Serif Display"', 'Georgia', 'serif'],
+                    }
+                }
+            }
         }
     </script>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body class="font-sans text-gray-800">
+<body class="font-sans text-gray-700 antialiased">
 
-    <!-- Top Bar -->
-    <div class="bg-dark text-white text-sm py-2">
-        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <span><i class="fas fa-envelope mr-1"></i> info@association.org.kh</span>
-                <span><i class="fas fa-phone mr-1"></i> +855 23 XXX XXX</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <a href="#" class="hover:text-accent transition"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-accent transition"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="hover:text-accent transition"><i class="fab fa-telegram"></i></a>
+    <!-- Gold prestige line -->
+    <div class="h-1 bg-gradient-to-r from-accent via-amber-500 to-accent"></div>
+
+    <!-- ============ TOP HEADER ============ -->
+    <header class="bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-5">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center gap-4 shrink-0">
+                    <div class="w-14 h-14 border-2 border-primary rounded-full flex items-center justify-center">
+                        <span class="text-primary font-serif text-2xl">PA</span>
+                    </div>
+                    <div>
+                        <div class="font-serif text-primary text-xl leading-tight">Professional Association</div>
+                        <div class="text-xs text-gray-400 uppercase tracking-[0.2em] mt-0.5">Kingdom of Cambodia</div>
+                    </div>
+                </a>
+
+                <!-- Right: Social + Search + CTA -->
+                <div class="hidden md:flex items-center gap-5">
+                    <div class="flex items-center gap-2">
+                        <a href="#" class="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center text-gray-400 hover:border-primary hover:text-primary transition-all duration-200" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-xs"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center text-gray-400 hover:border-primary hover:text-primary transition-all duration-200" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-xs"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center text-gray-400 hover:border-primary hover:text-primary transition-all duration-200" aria-label="YouTube">
+                            <i class="fab fa-youtube text-xs"></i>
+                        </a>
+                    </div>
+                    <div class="w-px h-8 bg-gray-200"></div>
+                    <button class="text-gray-400 hover:text-primary transition" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a href="membership.html" class="bg-primary hover:bg-accent text-white px-7 py-2.5 text-sm font-medium tracking-wide uppercase transition-colors duration-300">
+                        Become a Member
+                    </a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button id="mobile-toggle" class="lg:hidden text-primary text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
-    </div>
+    </header>
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center h-20">
-                <a href="../index.html" class="flex items-center gap-3">
-                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-xl">PA</span></div>
-                    <div><div class="font-bold text-primary text-lg leading-tight">Professional Association</div><div class="text-xs text-gray-500">of Cambodia</div></div>
+    <!-- ============ STICKY NAVIGATION ============ -->
+    <nav class="nav-sticky bg-white shadow-sm sticky top-0 z-50 transition-shadow duration-300 border-b border-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-12">
+                <!-- Sticky Logo (shown on scroll) -->
+                <a href="../index.html" class="nav-logo flex items-center gap-2 opacity-0 -translate-x-4 transition-all duration-300 pointer-events-none">
+                    <div class="w-7 h-7 border-2 border-primary rounded-full flex items-center justify-center">
+                        <span class="text-primary font-serif text-xs">PA</span>
+                    </div>
+                    <span class="font-serif text-primary text-sm">Professional Association</span>
                 </a>
-                <div class="hidden lg:flex items-center gap-1">
-                    <a href="about.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-primary transition">About Us</a>
-                    <a href="membership.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Membership</a>
-                    <a href="committees.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Committees</a>
-                    <a href="events.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Events</a>
-                    <a href="resources.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Resources</a>
-                    <a href="contact.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Contact</a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden lg:flex items-center gap-0">
+                    <div class="relative group">
+                        <a href="about.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition flex items-center gap-1 text-[13px] font-medium uppercase tracking-wider">
+                            About <i class="fas fa-chevron-down text-[8px] ml-1 opacity-40"></i>
+                        </a>
+                        <div class="absolute left-0 top-full bg-white shadow-lg py-2 min-w-[240px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50 border-t-2 border-accent">
+                            <a href="about.html" class="block px-5 py-2.5 hover:bg-light text-gray-500 hover:text-primary text-sm transition">About the Association</a>
+                            <a href="board.html" class="block px-5 py-2.5 hover:bg-light text-gray-500 hover:text-primary text-sm transition">Board of Directors</a>
+                            <a href="team.html" class="block px-5 py-2.5 hover:bg-light text-gray-500 hover:text-primary text-sm transition">Leadership Team</a>
+                            <a href="charter.html" class="block px-5 py-2.5 hover:bg-light text-primary font-medium text-sm transition">Charter &amp; Governance</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="membership.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition flex items-center gap-1 text-[13px] font-medium uppercase tracking-wider">
+                            Membership <i class="fas fa-chevron-down text-[8px] ml-1 opacity-40"></i>
+                        </a>
+                        <div class="absolute left-0 top-full bg-white shadow-lg py-2 min-w-[240px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50 border-t-2 border-accent">
+                            <a href="membership.html" class="block px-5 py-2.5 hover:bg-light text-gray-500 hover:text-primary text-sm transition">Become a Member</a>
+                            <a href="directory.html" class="block px-5 py-2.5 hover:bg-light text-gray-500 hover:text-primary text-sm transition">Member Directory</a>
+                        </div>
+                    </div>
+                    <a href="events.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition text-[13px] font-medium uppercase tracking-wider">Events</a>
+                    <a href="committees.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition text-[13px] font-medium uppercase tracking-wider">Advocacy</a>
+                    <a href="resources.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition text-[13px] font-medium uppercase tracking-wider">Resources</a>
+                    <a href="news.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition text-[13px] font-medium uppercase tracking-wider">News</a>
+                    <a href="contact.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition text-[13px] font-medium uppercase tracking-wider">Contact</a>
                 </div>
-                <a href="membership.html" class="hidden md:inline-block bg-accent hover:bg-yellow-500 text-white font-semibold px-6 py-2.5 rounded-lg transition shadow-md">Join Now</a>
+
+                <!-- Sticky CTA (shown on scroll) -->
+                <a href="membership.html" class="nav-cta hidden lg:block bg-primary hover:bg-accent text-white px-5 py-1.5 text-xs font-medium uppercase tracking-wider transition-all duration-300 opacity-0 translate-x-4 pointer-events-none">
+                    Join Now
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-lg">
+            <div class="px-6 py-5 space-y-1">
+                <a href="about.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">About</a>
+                <a href="board.html" class="block px-4 py-2 text-gray-400 hover:bg-light hover:text-primary rounded pl-8 text-xs uppercase tracking-wider">Board of Directors</a>
+                <a href="team.html" class="block px-4 py-2 text-gray-400 hover:bg-light hover:text-primary rounded pl-8 text-xs uppercase tracking-wider">Leadership Team</a>
+                <a href="charter.html" class="block px-4 py-2 text-primary hover:bg-light rounded pl-8 text-xs uppercase tracking-wider font-medium">Charter &amp; Governance</a>
+                <a href="membership.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">Membership</a>
+                <a href="directory.html" class="block px-4 py-2 text-gray-400 hover:bg-light hover:text-primary rounded pl-8 text-xs uppercase tracking-wider">Member Directory</a>
+                <a href="events.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">Events</a>
+                <a href="committees.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">Advocacy</a>
+                <a href="resources.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">Resources</a>
+                <a href="news.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">News</a>
+                <a href="contact.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">Contact</a>
+                <div class="pt-4 border-t border-gray-100">
+                    <a href="membership.html" class="block bg-primary text-white text-center py-3 text-sm font-medium uppercase tracking-wider hover:bg-accent transition">Become a Member</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Page Header -->
+    <!-- ============ PAGE HEADER ============ -->
     <section class="page-header text-white">
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-2">Governance</p>
-            <h1 class="text-4xl md:text-5xl font-bold">Charter</h1>
-            <p class="text-blue-200 mt-3 max-w-xl">The founding document governing our association's structure and operations.</p>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-4">Governance</p>
+            <h1 class="font-serif text-4xl md:text-5xl mb-4">Charter &amp; Governance</h1>
+            <div class="w-12 h-0.5 bg-accent mb-5"></div>
+            <p class="text-gray-300 max-w-xl text-base leading-relaxed mb-5">The founding document governing our Association's structure, purpose, and operations within the Kingdom of Cambodia.</p>
+            <nav class="flex items-center gap-2 text-sm text-gray-400">
+                <a href="../index.html" class="hover:text-accent transition">Home</a>
+                <i class="fas fa-chevron-right text-[8px] text-gray-600"></i>
+                <a href="about.html" class="hover:text-accent transition">About</a>
+                <i class="fas fa-chevron-right text-[8px] text-gray-600"></i>
+                <span class="text-white">Charter &amp; Governance</span>
+            </nav>
         </div>
     </section>
 
-    <!-- Charter Content -->
-    <section class="py-20">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-                <div class="prose max-w-none">
-                    <h2 class="text-2xl font-bold text-primary mb-6">Article I: Name and Purpose</h2>
-                    <p class="text-gray-600 mb-4">The name of this organization shall be the <strong>Professional Association of Cambodia</strong> (hereinafter referred to as "the Association").</p>
-                    <p class="text-gray-600 mb-8">The purpose of the Association shall be to advance the professional standards, education, and ethical practice of its members within the Kingdom of Cambodia, and to represent the collective interests of its members before government, regulatory bodies, and the public.</p>
+    <!-- ============ CHARTER PREAMBLE ============ -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-4">Preamble</p>
+            <h2 class="font-serif text-primary text-3xl md:text-4xl mb-8">Founding Charter</h2>
+            <div class="w-12 h-0.5 bg-accent mx-auto mb-8"></div>
+            <p class="text-gray-500 text-base leading-[1.9] max-w-3xl mx-auto">
+                This Charter establishes the foundational principles, governance framework, and operational guidelines of the Professional Association of Cambodia. It serves as the supreme governing document of the Association, to which all by-laws, policies, and regulations must conform.
+            </p>
+        </div>
+    </section>
 
-                    <h2 class="text-2xl font-bold text-primary mb-6">Article II: Membership</h2>
-                    <p class="text-gray-600 mb-4"><strong>Section 1.</strong> Membership shall be open to all qualified professionals and organizations who share the Association's commitment to professional excellence and ethical practice.</p>
-                    <p class="text-gray-600 mb-4"><strong>Section 2.</strong> The Association shall offer the following membership categories: Individual, Corporate, and Patron.</p>
-                    <p class="text-gray-600 mb-8"><strong>Section 3.</strong> Membership dues and benefits shall be determined by the Board of Directors and reviewed annually.</p>
+    <!-- ============ CHARTER ARTICLES ============ -->
+    <section class="py-10 pb-24 bg-light">
+        <div class="max-w-4xl mx-auto px-6">
 
-                    <h2 class="text-2xl font-bold text-primary mb-6">Article III: Board of Directors</h2>
-                    <p class="text-gray-600 mb-4"><strong>Section 1.</strong> The Association shall be governed by a Board of Directors consisting of no fewer than five (5) and no more than twelve (12) members.</p>
-                    <p class="text-gray-600 mb-4"><strong>Section 2.</strong> Board members shall serve two-year terms and may be re-elected for up to three consecutive terms.</p>
-                    <p class="text-gray-600 mb-8"><strong>Section 3.</strong> The Board shall elect from among its members a President, Vice President, Secretary General, and Treasurer.</p>
-
-                    <h2 class="text-2xl font-bold text-primary mb-6">Article IV: Meetings</h2>
-                    <p class="text-gray-600 mb-4"><strong>Section 1.</strong> The Association shall hold an Annual General Meeting (AGM) each calendar year.</p>
-                    <p class="text-gray-600 mb-4"><strong>Section 2.</strong> The Board of Directors shall meet no fewer than four (4) times per year.</p>
-                    <p class="text-gray-600 mb-8"><strong>Section 3.</strong> Special meetings may be called by the President or by petition of one-third of the membership.</p>
-
-                    <h2 class="text-2xl font-bold text-primary mb-6">Article V: Committees</h2>
-                    <p class="text-gray-600 mb-4"><strong>Section 1.</strong> The Board may establish standing and ad hoc committees to address specific areas of concern.</p>
-                    <p class="text-gray-600 mb-8"><strong>Section 2.</strong> Committee chairs shall be appointed by the President with approval of the Board.</p>
-
-                    <h2 class="text-2xl font-bold text-primary mb-6">Article VI: Amendments</h2>
-                    <p class="text-gray-600 mb-4">This Charter may be amended by a two-thirds vote of the membership present at an Annual General Meeting, provided that the proposed amendment has been circulated to all members at least thirty (30) days prior to the meeting.</p>
+            <!-- Article I -->
+            <div class="mb-14">
+                <div class="flex items-start gap-6 mb-6">
+                    <div class="shrink-0 w-14 h-14 bg-primary flex items-center justify-center">
+                        <span class="text-accent font-serif text-2xl">I</span>
+                    </div>
+                    <div>
+                        <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-2">Article I</p>
+                        <h2 class="font-serif text-primary text-2xl md:text-3xl">Name and Purpose</h2>
+                    </div>
                 </div>
+                <div class="border-l-2 border-accent pl-8 ml-7">
+                    <p class="text-gray-500 text-base leading-[1.9] mb-5">
+                        The name of this organization shall be the <strong class="text-primary">Professional Association of Cambodia</strong> (hereinafter referred to as "the Association").
+                    </p>
+                    <p class="text-gray-500 text-base leading-[1.9]">
+                        The purpose of the Association shall be to advance the professional standards, education, and ethical practice of its members within the Kingdom of Cambodia, and to represent the collective interests of its members before government, regulatory bodies, and the public.
+                    </p>
+                </div>
+            </div>
 
-                <div class="mt-12 pt-8 border-t border-gray-200 text-center">
+            <!-- Article II -->
+            <div class="mb-14">
+                <div class="flex items-start gap-6 mb-6">
+                    <div class="shrink-0 w-14 h-14 bg-primary flex items-center justify-center">
+                        <span class="text-accent font-serif text-2xl">II</span>
+                    </div>
+                    <div>
+                        <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-2">Article II</p>
+                        <h2 class="font-serif text-primary text-2xl md:text-3xl">Membership</h2>
+                    </div>
+                </div>
+                <div class="border-l-2 border-accent pl-8 ml-7 space-y-5">
+                    <div>
+                        <p class="text-gray-500 text-base leading-[1.9]">
+                            <span class="text-accent font-serif text-lg mr-2">1.</span>
+                            Membership shall be open to all qualified professionals and organizations who share the Association's commitment to professional excellence and ethical practice.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-base leading-[1.9]">
+                            <span class="text-accent font-serif text-lg mr-2">2.</span>
+                            The Association shall offer the following membership categories: Individual, Corporate, and Patron.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-base leading-[1.9]">
+                            <span class="text-accent font-serif text-lg mr-2">3.</span>
+                            Membership dues and benefits shall be determined by the Board of Directors and reviewed annually.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article III -->
+            <div class="mb-14">
+                <div class="flex items-start gap-6 mb-6">
+                    <div class="shrink-0 w-14 h-14 bg-primary flex items-center justify-center">
+                        <span class="text-accent font-serif text-2xl">III</span>
+                    </div>
+                    <div>
+                        <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-2">Article III</p>
+                        <h2 class="font-serif text-primary text-2xl md:text-3xl">Board of Directors</h2>
+                    </div>
+                </div>
+                <div class="border-l-2 border-accent pl-8 ml-7 space-y-5">
+                    <div>
+                        <p class="text-gray-500 text-base leading-[1.9]">
+                            <span class="text-accent font-serif text-lg mr-2">1.</span>
+                            The Association shall be governed by a Board of Directors consisting of no fewer than five (5) and no more than twelve (12) members.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-base leading-[1.9]">
+                            <span class="text-accent font-serif text-lg mr-2">2.</span>
+                            Board members shall serve two-year terms and may be re-elected for up to three consecutive terms.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-base leading-[1.9]">
+                            <span class="text-accent font-serif text-lg mr-2">3.</span>
+                            The Board shall elect from among its members a President, Vice President, Secretary General, and Treasurer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article IV -->
+            <div class="mb-14">
+                <div class="flex items-start gap-6 mb-6">
+                    <div class="shrink-0 w-14 h-14 bg-primary flex items-center justify-center">
+                        <span class="text-accent font-serif text-2xl">IV</span>
+                    </div>
+                    <div>
+                        <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-2">Article IV</p>
+                        <h2 class="font-serif text-primary text-2xl md:text-3xl">Meetings</h2>
+                    </div>
+                </div>
+                <div class="border-l-2 border-accent pl-8 ml-7 space-y-5">
+                    <div>
+                        <p class="text-gray-500 text-base leading-[1.9]">
+                            <span class="text-accent font-serif text-lg mr-2">1.</span>
+                            The Association shall hold an Annual General Meeting (AGM) each calendar year.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-base leading-[1.9]">
+                            <span class="text-accent font-serif text-lg mr-2">2.</span>
+                            The Board of Directors shall meet no fewer than four (4) times per year.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-base leading-[1.9]">
+                            <span class="text-accent font-serif text-lg mr-2">3.</span>
+                            Special meetings may be called by the President or by petition of one-third of the membership.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article V -->
+            <div class="mb-14">
+                <div class="flex items-start gap-6 mb-6">
+                    <div class="shrink-0 w-14 h-14 bg-primary flex items-center justify-center">
+                        <span class="text-accent font-serif text-2xl">V</span>
+                    </div>
+                    <div>
+                        <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-2">Article V</p>
+                        <h2 class="font-serif text-primary text-2xl md:text-3xl">Committees</h2>
+                    </div>
+                </div>
+                <div class="border-l-2 border-accent pl-8 ml-7 space-y-5">
+                    <div>
+                        <p class="text-gray-500 text-base leading-[1.9]">
+                            <span class="text-accent font-serif text-lg mr-2">1.</span>
+                            The Board may establish standing and ad hoc committees to address specific areas of concern.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-base leading-[1.9]">
+                            <span class="text-accent font-serif text-lg mr-2">2.</span>
+                            Committee chairs shall be appointed by the President with approval of the Board.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article VI -->
+            <div class="mb-14">
+                <div class="flex items-start gap-6 mb-6">
+                    <div class="shrink-0 w-14 h-14 bg-primary flex items-center justify-center">
+                        <span class="text-accent font-serif text-2xl">VI</span>
+                    </div>
+                    <div>
+                        <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-2">Article VI</p>
+                        <h2 class="font-serif text-primary text-2xl md:text-3xl">Amendments</h2>
+                    </div>
+                </div>
+                <div class="border-l-2 border-accent pl-8 ml-7">
+                    <p class="text-gray-500 text-base leading-[1.9]">
+                        This Charter may be amended by a two-thirds vote of the membership present at an Annual General Meeting, provided that the proposed amendment has been circulated to all members at least thirty (30) days prior to the meeting.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer Note & Download -->
+            <div class="mt-16 pt-10 border-t border-gray-200">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                     <p class="text-gray-400 text-sm italic">Last amended: [Date] at the Annual General Meeting</p>
-                    <a href="#" class="inline-flex items-center gap-2 text-secondary font-semibold mt-4 hover:text-primary transition">
+                    <a href="#" class="inline-flex items-center gap-3 bg-primary hover:bg-accent text-white px-8 py-3 text-sm font-medium uppercase tracking-widest transition-colors duration-300">
                         <i class="fas fa-download"></i> Download Charter (PDF)
                     </a>
                 </div>
@@ -103,47 +357,121 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white">
-        <div class="max-w-7xl mx-auto px-4 py-16">
-            <div class="grid md:grid-cols-4 gap-10">
+    <!-- ============ GOVERNANCE CTA ============ -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-[0.02]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%230c2340&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative">
+            <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-4">Governance</p>
+            <h2 class="font-serif text-primary text-3xl md:text-4xl mb-8">Meet Our Leadership</h2>
+            <div class="w-12 h-0.5 bg-accent mx-auto mb-8"></div>
+            <p class="text-gray-500 text-base leading-[1.9] mb-10 max-w-3xl mx-auto">
+                The Association is led by a distinguished Board of Directors and a dedicated leadership team committed to upholding the principles set forth in this Charter. Learn more about the individuals guiding our strategic direction.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="board.html" class="inline-block bg-primary hover:bg-accent text-white px-10 py-3.5 text-sm font-medium uppercase tracking-widest transition-colors duration-300">
+                    Board of Directors
+                </a>
+                <a href="team.html" class="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-3.5 text-sm font-medium uppercase tracking-widest transition-all duration-300">
+                    Leadership Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="bg-dark text-gray-400">
+        <div class="max-w-7xl mx-auto px-6 py-20">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Contact -->
                 <div>
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold">PA</span></div>
-                        <div class="font-bold text-lg">Professional Association</div>
+                    <h3 class="text-white font-serif text-xl mb-2">How Can We Assist You?</h3>
+                    <p class="text-gray-500 text-sm mb-6">We welcome your inquiries.</p>
+                    <a href="tel:+85523XXXXXX" class="flex items-center gap-3 text-gray-400 hover:text-white transition mb-3 text-sm">
+                        <i class="fas fa-phone text-accent text-xs"></i>
+                        <span>+855 (0) 23 XXX XXX</span>
+                    </a>
+                    <div class="flex items-start gap-3 text-gray-500 mb-8 text-sm">
+                        <i class="far fa-clock text-accent text-xs mt-1"></i>
+                        <div>
+                            Monday &ndash; Friday<br>
+                            9:00 AM &ndash; 5:30 PM
+                        </div>
                     </div>
-                    <p class="text-gray-400 text-sm">Empowering professionals and advancing standards in Cambodia since 2005.</p>
+                    <div class="flex items-center gap-2">
+                        <a href="#" class="w-8 h-8 border border-gray-700 flex items-center justify-center text-gray-500 hover:border-accent hover:text-accent transition-all duration-200">
+                            <i class="fab fa-facebook-f text-xs"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 border border-gray-700 flex items-center justify-center text-gray-500 hover:border-accent hover:text-accent transition-all duration-200">
+                            <i class="fab fa-linkedin-in text-xs"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 border border-gray-700 flex items-center justify-center text-gray-500 hover:border-accent hover:text-accent transition-all duration-200">
+                            <i class="fab fa-youtube text-xs"></i>
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Address -->
                 <div>
-                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="about.html" class="hover:text-accent transition">About Us</a></li>
-                        <li><a href="membership.html" class="hover:text-accent transition">Membership</a></li>
-                        <li><a href="events.html" class="hover:text-accent transition">Events</a></li>
-                        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
-                    </ul>
+                    <h4 class="text-white text-xs font-semibold uppercase tracking-[0.2em] mb-5">Address</h4>
+                    <p class="text-gray-500 leading-relaxed text-sm">
+                        [Building Name]<br>
+                        [Street Address]<br>
+                        [District, Commune]<br>
+                        Phnom Penh, Cambodia
+                    </p>
                 </div>
+
+                <!-- Departments -->
                 <div>
-                    <h4 class="font-semibold text-lg mb-4">Resources</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="resources.html" class="hover:text-accent transition">Industry Guides</a></li>
-                        <li><a href="directory.html" class="hover:text-accent transition">Member Directory</a></li>
-                    </ul>
+                    <h4 class="text-white text-xs font-semibold uppercase tracking-[0.2em] mb-5">Departments</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-gray-600 text-xs uppercase tracking-wider mb-0.5">General Inquiries</p>
+                            <a href="mailto:info@association.org.kh" class="text-gray-400 hover:text-accent transition text-sm">info@association.org.kh</a>
+                        </div>
+                        <div>
+                            <p class="text-gray-600 text-xs uppercase tracking-wider mb-0.5">Events</p>
+                            <a href="mailto:events@association.org.kh" class="text-gray-400 hover:text-accent transition text-sm">events@association.org.kh</a>
+                        </div>
+                        <div>
+                            <p class="text-gray-600 text-xs uppercase tracking-wider mb-0.5">Membership</p>
+                            <a href="mailto:members@association.org.kh" class="text-gray-400 hover:text-accent transition text-sm">members@association.org.kh</a>
+                        </div>
+                        <div>
+                            <p class="text-gray-600 text-xs uppercase tracking-wider mb-0.5">Communications</p>
+                            <a href="mailto:comms@association.org.kh" class="text-gray-400 hover:text-accent transition text-sm">comms@association.org.kh</a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Quick Links -->
                 <div>
-                    <h4 class="font-semibold text-lg mb-4">Contact</h4>
-                    <ul class="space-y-3 text-gray-400 text-sm">
-                        <li><i class="fas fa-map-marker-alt text-accent mr-2"></i> Phnom Penh, Cambodia</li>
-                        <li><i class="fas fa-phone text-accent mr-2"></i> +855 23 XXX XXX</li>
-                        <li><i class="fas fa-envelope text-accent mr-2"></i> info@association.org.kh</li>
+                    <h4 class="text-white text-xs font-semibold uppercase tracking-[0.2em] mb-5">Quick Links</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="about.html" class="text-gray-500 hover:text-accent transition text-sm">About the Association</a></li>
+                        <li><a href="membership.html" class="text-gray-500 hover:text-accent transition text-sm">Membership</a></li>
+                        <li><a href="events.html" class="text-gray-500 hover:text-accent transition text-sm">Events Calendar</a></li>
+                        <li><a href="committees.html" class="text-gray-500 hover:text-accent transition text-sm">Advocacy Committees</a></li>
+                        <li><a href="news.html" class="text-gray-500 hover:text-accent transition text-sm">News &amp; Publications</a></li>
+                        <li><a href="resources.html" class="text-gray-500 hover:text-accent transition text-sm">Resources</a></li>
+                        <li><a href="contact.html" class="text-gray-500 hover:text-accent transition text-sm">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="border-t border-white/10">
-            <div class="max-w-7xl mx-auto px-4 py-6 text-center text-gray-500 text-sm">&copy; 2026 Professional Association of Cambodia. All rights reserved.</div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-800/50">
+            <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-600 text-xs">&copy; 2026 Professional Association of Cambodia. All rights reserved.</p>
+                <div class="flex items-center gap-6 text-xs text-gray-600">
+                    <a href="#" class="hover:text-gray-400 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-400 transition">Terms of Use</a>
+                </div>
+            </div>
         </div>
     </footer>
+
     <script src="../js/main.js"></script>
 </body>
 </html>
