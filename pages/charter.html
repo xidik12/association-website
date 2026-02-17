@@ -28,131 +28,99 @@
     </script>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body class="font-sans text-gray-700 antialiased">
+<body class="font-sans text-gray-600 antialiased">
 
-    <!-- Gold prestige line -->
-    <div class="h-1 bg-gradient-to-r from-accent via-amber-500 to-accent"></div>
-
-    <!-- ============ TOP HEADER ============ -->
-    <header class="bg-white border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-5">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <a href="../index.html" class="flex items-center gap-4 shrink-0">
-                    <div class="w-14 h-14 border-2 border-primary rounded-full flex items-center justify-center">
-                        <span class="text-primary font-serif text-2xl">PA</span>
-                    </div>
-                    <div>
-                        <div class="font-serif text-primary text-xl leading-tight">Professional Association</div>
-                        <div class="text-xs text-gray-400 uppercase tracking-[0.2em] mt-0.5">Kingdom of Cambodia</div>
-                    </div>
-                </a>
-
-                <!-- Right: Social + Search + CTA -->
-                <div class="hidden md:flex items-center gap-5">
-                    <div class="flex items-center gap-2">
-                        <a href="#" class="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center text-gray-400 hover:border-primary hover:text-primary transition-all duration-200" aria-label="Facebook">
-                            <i class="fab fa-facebook-f text-xs"></i>
-                        </a>
-                        <a href="#" class="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center text-gray-400 hover:border-primary hover:text-primary transition-all duration-200" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in text-xs"></i>
-                        </a>
-                        <a href="#" class="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center text-gray-400 hover:border-primary hover:text-primary transition-all duration-200" aria-label="YouTube">
-                            <i class="fab fa-youtube text-xs"></i>
-                        </a>
-                    </div>
-                    <div class="w-px h-8 bg-gray-200"></div>
-                    <button class="text-gray-400 hover:text-primary transition" aria-label="Search">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <a href="membership.html" class="bg-primary hover:bg-accent text-white px-7 py-2.5 text-sm font-medium tracking-wide uppercase transition-colors duration-300">
-                        Become a Member
-                    </a>
+    <!-- ── HEADER ── -->
+    <header class="bg-white">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-primary flex items-center justify-center">
+                    <span class="text-white font-serif text-xl">PA</span>
                 </div>
-
-                <!-- Mobile Toggle -->
-                <button id="mobile-toggle" class="lg:hidden text-primary text-2xl">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <div class="hidden sm:block">
+                    <div class="font-serif text-primary text-lg leading-tight">Professional Association</div>
+                    <div class="text-[11px] text-gray-400 tracking-wider">of Cambodia</div>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#" aria-label="Facebook" class="text-gray-300 hover:text-primary transition-colors"><i class="fab fa-facebook-f text-sm"></i></a>
+                <a href="#" aria-label="LinkedIn" class="text-gray-300 hover:text-primary transition-colors"><i class="fab fa-linkedin-in text-sm"></i></a>
+                <a href="#" aria-label="YouTube" class="text-gray-300 hover:text-primary transition-colors"><i class="fab fa-youtube text-sm"></i></a>
+                <div class="w-px h-5 bg-gray-200"></div>
+                <a href="membership.html" class="btn-primary" style="padding: 10px 28px; font-size: 12px;">Become a Member</a>
             </div>
+            <button id="mobile-toggle" class="md:hidden text-primary text-xl"><i class="fas fa-bars"></i></button>
         </div>
     </header>
 
-    <!-- ============ STICKY NAVIGATION ============ -->
-    <nav class="nav-sticky bg-white shadow-sm sticky top-0 z-50 transition-shadow duration-300 border-b border-gray-50">
+    <!-- ── NAV ── -->
+    <nav class="nav-sticky bg-white border-t border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-12">
-                <!-- Sticky Logo (shown on scroll) -->
                 <a href="../index.html" class="nav-logo flex items-center gap-2 opacity-0 -translate-x-4 transition-all duration-300 pointer-events-none">
-                    <div class="w-7 h-7 border-2 border-primary rounded-full flex items-center justify-center">
-                        <span class="text-primary font-serif text-xs">PA</span>
+                    <div class="w-7 h-7 bg-primary flex items-center justify-center">
+                        <span class="text-white font-serif text-xs">PA</span>
                     </div>
                     <span class="font-serif text-primary text-sm">Professional Association</span>
                 </a>
-
-                <!-- Desktop Nav Links -->
                 <div class="hidden lg:flex items-center gap-0">
                     <div class="relative group">
-                        <a href="about.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition flex items-center gap-1 text-[13px] font-medium uppercase tracking-wider">
-                            About <i class="fas fa-chevron-down text-[8px] ml-1 opacity-40"></i>
+                        <a href="about.html" class="nav-link px-4 py-3 text-gray-500 hover:text-primary transition text-[13px] font-medium tracking-wide flex items-center gap-1">
+                            About <i class="fas fa-chevron-down text-[8px] ml-1 opacity-30"></i>
                         </a>
-                        <div class="absolute left-0 top-full bg-white shadow-lg py-2 min-w-[240px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50 border-t-2 border-accent">
-                            <a href="about.html" class="block px-5 py-2.5 hover:bg-light text-gray-500 hover:text-primary text-sm transition">About the Association</a>
-                            <a href="board.html" class="block px-5 py-2.5 hover:bg-light text-gray-500 hover:text-primary text-sm transition">Board of Directors</a>
-                            <a href="team.html" class="block px-5 py-2.5 hover:bg-light text-gray-500 hover:text-primary text-sm transition">Leadership Team</a>
-                            <a href="charter.html" class="block px-5 py-2.5 hover:bg-light text-primary font-medium text-sm transition">Charter &amp; Governance</a>
+                        <div class="absolute left-0 top-full bg-white shadow-lg border border-gray-100 py-1 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0 z-50">
+                            <a href="about.html" class="block px-5 py-2.5 text-gray-500 hover:text-primary hover:bg-gray-50 text-sm transition">About the Association</a>
+                            <a href="board.html" class="block px-5 py-2.5 text-gray-500 hover:text-primary hover:bg-gray-50 text-sm transition">Board of Directors</a>
+                            <a href="team.html" class="block px-5 py-2.5 text-gray-500 hover:text-primary hover:bg-gray-50 text-sm transition">Leadership Team</a>
+                            <a href="charter.html" class="block px-5 py-2.5 text-primary font-medium hover:bg-gray-50 text-sm transition">Charter &amp; Governance</a>
                         </div>
                     </div>
                     <div class="relative group">
-                        <a href="membership.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition flex items-center gap-1 text-[13px] font-medium uppercase tracking-wider">
-                            Membership <i class="fas fa-chevron-down text-[8px] ml-1 opacity-40"></i>
+                        <a href="membership.html" class="nav-link px-4 py-3 text-gray-500 hover:text-primary transition text-[13px] font-medium tracking-wide flex items-center gap-1">
+                            Membership <i class="fas fa-chevron-down text-[8px] ml-1 opacity-30"></i>
                         </a>
-                        <div class="absolute left-0 top-full bg-white shadow-lg py-2 min-w-[240px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50 border-t-2 border-accent">
-                            <a href="membership.html" class="block px-5 py-2.5 hover:bg-light text-gray-500 hover:text-primary text-sm transition">Become a Member</a>
-                            <a href="directory.html" class="block px-5 py-2.5 hover:bg-light text-gray-500 hover:text-primary text-sm transition">Member Directory</a>
+                        <div class="absolute left-0 top-full bg-white shadow-lg border border-gray-100 py-1 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0 z-50">
+                            <a href="membership.html" class="block px-5 py-2.5 text-gray-500 hover:text-primary hover:bg-gray-50 text-sm transition">Become a Member</a>
+                            <a href="directory.html" class="block px-5 py-2.5 text-gray-500 hover:text-primary hover:bg-gray-50 text-sm transition">Member Directory</a>
                         </div>
                     </div>
-                    <a href="events.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition text-[13px] font-medium uppercase tracking-wider">Events</a>
-                    <a href="committees.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition text-[13px] font-medium uppercase tracking-wider">Advocacy</a>
-                    <a href="resources.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition text-[13px] font-medium uppercase tracking-wider">Resources</a>
-                    <a href="news.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition text-[13px] font-medium uppercase tracking-wider">News</a>
-                    <a href="contact.html" class="nav-link px-4 py-3 text-gray-600 hover:text-primary transition text-[13px] font-medium uppercase tracking-wider">Contact</a>
+                    <a href="events.html" class="nav-link px-4 py-3 text-gray-500 hover:text-primary transition text-[13px] font-medium tracking-wide">Events</a>
+                    <a href="committees.html" class="nav-link px-4 py-3 text-gray-500 hover:text-primary transition text-[13px] font-medium tracking-wide">Advocacy</a>
+                    <a href="resources.html" class="nav-link px-4 py-3 text-gray-500 hover:text-primary transition text-[13px] font-medium tracking-wide">Resources</a>
+                    <a href="news.html" class="nav-link px-4 py-3 text-gray-500 hover:text-primary transition text-[13px] font-medium tracking-wide">News</a>
+                    <a href="contact.html" class="nav-link px-4 py-3 text-gray-500 hover:text-primary transition text-[13px] font-medium tracking-wide">Contact</a>
                 </div>
-
-                <!-- Sticky CTA (shown on scroll) -->
-                <a href="membership.html" class="nav-cta hidden lg:block bg-primary hover:bg-accent text-white px-5 py-1.5 text-xs font-medium uppercase tracking-wider transition-all duration-300 opacity-0 translate-x-4 pointer-events-none">
+                <a href="membership.html" class="nav-cta hidden lg:block btn-primary opacity-0 translate-x-4 transition-all duration-300 pointer-events-none" style="padding: 8px 20px; font-size: 11px;">
                     Join Now
                 </a>
             </div>
         </div>
-
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-lg">
-            <div class="px-6 py-5 space-y-1">
-                <a href="about.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">About</a>
-                <a href="board.html" class="block px-4 py-2 text-gray-400 hover:bg-light hover:text-primary rounded pl-8 text-xs uppercase tracking-wider">Board of Directors</a>
-                <a href="team.html" class="block px-4 py-2 text-gray-400 hover:bg-light hover:text-primary rounded pl-8 text-xs uppercase tracking-wider">Leadership Team</a>
-                <a href="charter.html" class="block px-4 py-2 text-primary hover:bg-light rounded pl-8 text-xs uppercase tracking-wider font-medium">Charter &amp; Governance</a>
-                <a href="membership.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">Membership</a>
-                <a href="directory.html" class="block px-4 py-2 text-gray-400 hover:bg-light hover:text-primary rounded pl-8 text-xs uppercase tracking-wider">Member Directory</a>
-                <a href="events.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">Events</a>
-                <a href="committees.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">Advocacy</a>
-                <a href="resources.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">Resources</a>
-                <a href="news.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">News</a>
-                <a href="contact.html" class="block px-4 py-2.5 text-gray-700 hover:bg-light hover:text-primary rounded text-sm font-medium">Contact</a>
-                <div class="pt-4 border-t border-gray-100">
-                    <a href="membership.html" class="block bg-primary text-white text-center py-3 text-sm font-medium uppercase tracking-wider hover:bg-accent transition">Become a Member</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100">
+            <div class="px-6 py-4 space-y-1">
+                <a href="about.html" class="block py-2 text-gray-600 text-sm font-medium">About</a>
+                <a href="board.html" class="block py-1.5 text-gray-400 text-sm pl-4">Board of Directors</a>
+                <a href="team.html" class="block py-1.5 text-gray-400 text-sm pl-4">Leadership Team</a>
+                <a href="charter.html" class="block py-1.5 text-primary text-sm pl-4 font-medium">Charter &amp; Governance</a>
+                <a href="membership.html" class="block py-2 text-gray-600 text-sm font-medium">Membership</a>
+                <a href="directory.html" class="block py-1.5 text-gray-400 text-sm pl-4">Member Directory</a>
+                <a href="events.html" class="block py-2 text-gray-600 text-sm font-medium">Events</a>
+                <a href="committees.html" class="block py-2 text-gray-600 text-sm font-medium">Advocacy</a>
+                <a href="resources.html" class="block py-2 text-gray-600 text-sm font-medium">Resources</a>
+                <a href="news.html" class="block py-2 text-gray-600 text-sm font-medium">News</a>
+                <a href="contact.html" class="block py-2 text-gray-600 text-sm font-medium">Contact</a>
+                <div class="pt-3 border-t border-gray-100">
+                    <a href="membership.html" class="btn-primary block text-center" style="padding: 12px;">Become a Member</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- ============ PAGE HEADER ============ -->
+    <!-- ── PAGE HEADER ── -->
     <section class="page-header text-white">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-4">Governance</p>
+            <p class="text-accent text-sm font-medium mb-2">Governance</p>
             <h1 class="font-serif text-4xl md:text-5xl mb-4">Charter &amp; Governance</h1>
-            <div class="w-12 h-0.5 bg-accent mb-5"></div>
             <p class="text-gray-300 max-w-xl text-base leading-relaxed mb-5">The founding document governing our Association's structure, purpose, and operations within the Kingdom of Cambodia.</p>
             <nav class="flex items-center gap-2 text-sm text-gray-400">
                 <a href="../index.html" class="hover:text-accent transition">Home</a>
@@ -164,34 +132,34 @@
         </div>
     </section>
 
-    <!-- ============ CHARTER PREAMBLE ============ -->
+    <!-- ── CHARTER PREAMBLE ── -->
     <section class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-4">Preamble</p>
-            <h2 class="font-serif text-primary text-3xl md:text-4xl mb-8">Founding Charter</h2>
-            <div class="w-12 h-0.5 bg-accent mx-auto mb-8"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center reveal">
+            <p class="text-accent text-sm font-medium mb-2">Preamble</p>
+            <h2 class="font-serif text-primary text-3xl md:text-4xl mb-6">Founding Charter</h2>
+            <div class="h-0.5 bg-accent line-grow mx-auto mb-8"></div>
             <p class="text-gray-500 text-base leading-[1.9] max-w-3xl mx-auto">
                 This Charter establishes the foundational principles, governance framework, and operational guidelines of the Professional Association of Cambodia. It serves as the supreme governing document of the Association, to which all by-laws, policies, and regulations must conform.
             </p>
         </div>
     </section>
 
-    <!-- ============ CHARTER ARTICLES ============ -->
+    <!-- ── CHARTER ARTICLES ── -->
     <section class="py-10 pb-24 bg-light">
         <div class="max-w-4xl mx-auto px-6">
 
             <!-- Article I -->
-            <div class="mb-14">
+            <div class="mb-14 reveal">
                 <div class="flex items-start gap-6 mb-6">
                     <div class="shrink-0 w-14 h-14 bg-primary flex items-center justify-center">
                         <span class="text-accent font-serif text-2xl">I</span>
                     </div>
                     <div>
-                        <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-2">Article I</p>
+                        <p class="text-accent text-sm font-medium mb-2">Article I</p>
                         <h2 class="font-serif text-primary text-2xl md:text-3xl">Name and Purpose</h2>
                     </div>
                 </div>
-                <div class="border-l-2 border-accent pl-8 ml-7">
+                <div class="pl-8 ml-7">
                     <p class="text-gray-500 text-base leading-[1.9] mb-5">
                         The name of this organization shall be the <strong class="text-primary">Professional Association of Cambodia</strong> (hereinafter referred to as "the Association").
                     </p>
@@ -202,17 +170,17 @@
             </div>
 
             <!-- Article II -->
-            <div class="mb-14">
+            <div class="mb-14 reveal">
                 <div class="flex items-start gap-6 mb-6">
                     <div class="shrink-0 w-14 h-14 bg-primary flex items-center justify-center">
                         <span class="text-accent font-serif text-2xl">II</span>
                     </div>
                     <div>
-                        <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-2">Article II</p>
+                        <p class="text-accent text-sm font-medium mb-2">Article II</p>
                         <h2 class="font-serif text-primary text-2xl md:text-3xl">Membership</h2>
                     </div>
                 </div>
-                <div class="border-l-2 border-accent pl-8 ml-7 space-y-5">
+                <div class="pl-8 ml-7 space-y-5">
                     <div>
                         <p class="text-gray-500 text-base leading-[1.9]">
                             <span class="text-accent font-serif text-lg mr-2">1.</span>
@@ -235,17 +203,17 @@
             </div>
 
             <!-- Article III -->
-            <div class="mb-14">
+            <div class="mb-14 reveal">
                 <div class="flex items-start gap-6 mb-6">
                     <div class="shrink-0 w-14 h-14 bg-primary flex items-center justify-center">
                         <span class="text-accent font-serif text-2xl">III</span>
                     </div>
                     <div>
-                        <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-2">Article III</p>
+                        <p class="text-accent text-sm font-medium mb-2">Article III</p>
                         <h2 class="font-serif text-primary text-2xl md:text-3xl">Board of Directors</h2>
                     </div>
                 </div>
-                <div class="border-l-2 border-accent pl-8 ml-7 space-y-5">
+                <div class="pl-8 ml-7 space-y-5">
                     <div>
                         <p class="text-gray-500 text-base leading-[1.9]">
                             <span class="text-accent font-serif text-lg mr-2">1.</span>
@@ -268,17 +236,17 @@
             </div>
 
             <!-- Article IV -->
-            <div class="mb-14">
+            <div class="mb-14 reveal">
                 <div class="flex items-start gap-6 mb-6">
                     <div class="shrink-0 w-14 h-14 bg-primary flex items-center justify-center">
                         <span class="text-accent font-serif text-2xl">IV</span>
                     </div>
                     <div>
-                        <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-2">Article IV</p>
+                        <p class="text-accent text-sm font-medium mb-2">Article IV</p>
                         <h2 class="font-serif text-primary text-2xl md:text-3xl">Meetings</h2>
                     </div>
                 </div>
-                <div class="border-l-2 border-accent pl-8 ml-7 space-y-5">
+                <div class="pl-8 ml-7 space-y-5">
                     <div>
                         <p class="text-gray-500 text-base leading-[1.9]">
                             <span class="text-accent font-serif text-lg mr-2">1.</span>
@@ -301,17 +269,17 @@
             </div>
 
             <!-- Article V -->
-            <div class="mb-14">
+            <div class="mb-14 reveal">
                 <div class="flex items-start gap-6 mb-6">
                     <div class="shrink-0 w-14 h-14 bg-primary flex items-center justify-center">
                         <span class="text-accent font-serif text-2xl">V</span>
                     </div>
                     <div>
-                        <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-2">Article V</p>
+                        <p class="text-accent text-sm font-medium mb-2">Article V</p>
                         <h2 class="font-serif text-primary text-2xl md:text-3xl">Committees</h2>
                     </div>
                 </div>
-                <div class="border-l-2 border-accent pl-8 ml-7 space-y-5">
+                <div class="pl-8 ml-7 space-y-5">
                     <div>
                         <p class="text-gray-500 text-base leading-[1.9]">
                             <span class="text-accent font-serif text-lg mr-2">1.</span>
@@ -328,17 +296,17 @@
             </div>
 
             <!-- Article VI -->
-            <div class="mb-14">
+            <div class="mb-14 reveal">
                 <div class="flex items-start gap-6 mb-6">
                     <div class="shrink-0 w-14 h-14 bg-primary flex items-center justify-center">
                         <span class="text-accent font-serif text-2xl">VI</span>
                     </div>
                     <div>
-                        <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-2">Article VI</p>
+                        <p class="text-accent text-sm font-medium mb-2">Article VI</p>
                         <h2 class="font-serif text-primary text-2xl md:text-3xl">Amendments</h2>
                     </div>
                 </div>
-                <div class="border-l-2 border-accent pl-8 ml-7">
+                <div class="pl-8 ml-7">
                     <p class="text-gray-500 text-base leading-[1.9]">
                         This Charter may be amended by a two-thirds vote of the membership present at an Annual General Meeting, provided that the proposed amendment has been circulated to all members at least thirty (30) days prior to the meeting.
                     </p>
@@ -346,10 +314,10 @@
             </div>
 
             <!-- Footer Note & Download -->
-            <div class="mt-16 pt-10 border-t border-gray-200">
+            <div class="mt-16 pt-10 border-t border-gray-200 reveal">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                     <p class="text-gray-400 text-sm italic">Last amended: [Date] at the Annual General Meeting</p>
-                    <a href="#" class="inline-flex items-center gap-3 bg-primary hover:bg-accent text-white px-8 py-3 text-sm font-medium uppercase tracking-widest transition-colors duration-300">
+                    <a href="#" class="btn-primary inline-flex items-center gap-3">
                         <i class="fas fa-download"></i> Download Charter (PDF)
                     </a>
                 </div>
@@ -357,114 +325,82 @@
         </div>
     </section>
 
-    <!-- ============ GOVERNANCE CTA ============ -->
+    <!-- ── GOVERNANCE CTA ── -->
     <section class="py-24 bg-white relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full opacity-[0.02]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%230c2340&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative">
-            <p class="text-accent font-medium text-xs uppercase tracking-[0.3em] mb-4">Governance</p>
-            <h2 class="font-serif text-primary text-3xl md:text-4xl mb-8">Meet Our Leadership</h2>
-            <div class="w-12 h-0.5 bg-accent mx-auto mb-8"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative reveal">
+            <p class="text-accent text-sm font-medium mb-2">Governance</p>
+            <h2 class="font-serif text-primary text-3xl md:text-4xl mb-6">Meet Our Leadership</h2>
+            <div class="h-0.5 bg-accent line-grow mx-auto mb-8"></div>
             <p class="text-gray-500 text-base leading-[1.9] mb-10 max-w-3xl mx-auto">
                 The Association is led by a distinguished Board of Directors and a dedicated leadership team committed to upholding the principles set forth in this Charter. Learn more about the individuals guiding our strategic direction.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="board.html" class="inline-block bg-primary hover:bg-accent text-white px-10 py-3.5 text-sm font-medium uppercase tracking-widest transition-colors duration-300">
+                <a href="board.html" class="btn-primary">
                     Board of Directors
                 </a>
-                <a href="team.html" class="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-3.5 text-sm font-medium uppercase tracking-widest transition-all duration-300">
+                <a href="team.html" class="btn-outline">
                     Leadership Team
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- ============ FOOTER ============ -->
+    <!-- ── FOOTER ── -->
     <footer class="bg-dark text-gray-400">
-        <div class="max-w-7xl mx-auto px-6 py-20">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-                <!-- Contact -->
+        <div class="max-w-7xl mx-auto px-6 pt-16 pb-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
                 <div>
-                    <h3 class="text-white font-serif text-xl mb-2">How Can We Assist You?</h3>
-                    <p class="text-gray-500 text-sm mb-6">We welcome your inquiries.</p>
-                    <a href="tel:+85523XXXXXX" class="flex items-center gap-3 text-gray-400 hover:text-white transition mb-3 text-sm">
-                        <i class="fas fa-phone text-accent text-xs"></i>
-                        <span>+855 (0) 23 XXX XXX</span>
+                    <p class="text-white font-serif text-lg mb-1">How can we help you?</p>
+                    <p class="text-gray-500 text-sm mb-5">We would love to hear from you!</p>
+                    <a href="tel:+85523XXXXXX" class="flex items-center gap-2 text-sm hover:text-white transition mb-2">
+                        <i class="fas fa-phone text-xs text-accent"></i> +855 (0) 23 XXX XXX
                     </a>
-                    <div class="flex items-start gap-3 text-gray-500 mb-8 text-sm">
-                        <i class="far fa-clock text-accent text-xs mt-1"></i>
-                        <div>
-                            Monday &ndash; Friday<br>
-                            9:00 AM &ndash; 5:30 PM
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <a href="#" class="w-8 h-8 border border-gray-700 flex items-center justify-center text-gray-500 hover:border-accent hover:text-accent transition-all duration-200">
-                            <i class="fab fa-facebook-f text-xs"></i>
-                        </a>
-                        <a href="#" class="w-8 h-8 border border-gray-700 flex items-center justify-center text-gray-500 hover:border-accent hover:text-accent transition-all duration-200">
-                            <i class="fab fa-linkedin-in text-xs"></i>
-                        </a>
-                        <a href="#" class="w-8 h-8 border border-gray-700 flex items-center justify-center text-gray-500 hover:border-accent hover:text-accent transition-all duration-200">
-                            <i class="fab fa-youtube text-xs"></i>
-                        </a>
+                    <p class="text-gray-500 text-sm">Monday &ndash; Friday, 9:00 AM &ndash; 5:30 PM</p>
+                    <div class="flex items-center gap-3 mt-5">
+                        <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-
-                <!-- Address -->
                 <div>
-                    <h4 class="text-white text-xs font-semibold uppercase tracking-[0.2em] mb-5">Address</h4>
-                    <p class="text-gray-500 leading-relaxed text-sm">
-                        [Building Name]<br>
-                        [Street Address]<br>
-                        [District, Commune]<br>
-                        Phnom Penh, Cambodia
-                    </p>
+                    <h4 class="text-white text-sm font-medium mb-4">Address</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">[Building Name]<br>[Street Address]<br>[District, Commune]<br>Phnom Penh, Cambodia</p>
                 </div>
-
-                <!-- Departments -->
                 <div>
-                    <h4 class="text-white text-xs font-semibold uppercase tracking-[0.2em] mb-5">Departments</h4>
-                    <div class="space-y-4">
+                    <h4 class="text-white text-sm font-medium mb-4">Departments</h4>
+                    <div class="space-y-3 text-sm">
                         <div>
-                            <p class="text-gray-600 text-xs uppercase tracking-wider mb-0.5">General Inquiries</p>
-                            <a href="mailto:info@association.org.kh" class="text-gray-400 hover:text-accent transition text-sm">info@association.org.kh</a>
+                            <p class="text-gray-600 text-xs mb-0.5">General Inquiries</p>
+                            <a href="mailto:info@association.org.kh" class="hover:text-accent transition">info@association.org.kh</a>
                         </div>
                         <div>
-                            <p class="text-gray-600 text-xs uppercase tracking-wider mb-0.5">Events</p>
-                            <a href="mailto:events@association.org.kh" class="text-gray-400 hover:text-accent transition text-sm">events@association.org.kh</a>
+                            <p class="text-gray-600 text-xs mb-0.5">Events</p>
+                            <a href="mailto:events@association.org.kh" class="hover:text-accent transition">events@association.org.kh</a>
                         </div>
                         <div>
-                            <p class="text-gray-600 text-xs uppercase tracking-wider mb-0.5">Membership</p>
-                            <a href="mailto:members@association.org.kh" class="text-gray-400 hover:text-accent transition text-sm">members@association.org.kh</a>
-                        </div>
-                        <div>
-                            <p class="text-gray-600 text-xs uppercase tracking-wider mb-0.5">Communications</p>
-                            <a href="mailto:comms@association.org.kh" class="text-gray-400 hover:text-accent transition text-sm">comms@association.org.kh</a>
+                            <p class="text-gray-600 text-xs mb-0.5">Membership</p>
+                            <a href="mailto:members@association.org.kh" class="hover:text-accent transition">members@association.org.kh</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Quick Links -->
                 <div>
-                    <h4 class="text-white text-xs font-semibold uppercase tracking-[0.2em] mb-5">Quick Links</h4>
-                    <ul class="space-y-2.5">
-                        <li><a href="about.html" class="text-gray-500 hover:text-accent transition text-sm">About the Association</a></li>
-                        <li><a href="membership.html" class="text-gray-500 hover:text-accent transition text-sm">Membership</a></li>
-                        <li><a href="events.html" class="text-gray-500 hover:text-accent transition text-sm">Events Calendar</a></li>
-                        <li><a href="committees.html" class="text-gray-500 hover:text-accent transition text-sm">Advocacy Committees</a></li>
-                        <li><a href="news.html" class="text-gray-500 hover:text-accent transition text-sm">News &amp; Publications</a></li>
-                        <li><a href="resources.html" class="text-gray-500 hover:text-accent transition text-sm">Resources</a></li>
-                        <li><a href="contact.html" class="text-gray-500 hover:text-accent transition text-sm">Contact Us</a></li>
+                    <h4 class="text-white text-sm font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-accent transition">About</a></li>
+                        <li><a href="membership.html" class="hover:text-accent transition">Membership</a></li>
+                        <li><a href="events.html" class="hover:text-accent transition">Events</a></li>
+                        <li><a href="committees.html" class="hover:text-accent transition">Advocacy</a></li>
+                        <li><a href="news.html" class="hover:text-accent transition">News</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-
-        <!-- Copyright -->
         <div class="border-t border-gray-800/50">
-            <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-600 text-xs">&copy; 2026 Professional Association of Cambodia. All rights reserved.</p>
-                <div class="flex items-center gap-6 text-xs text-gray-600">
+            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-gray-600">
+                <p>&copy; 2026 Professional Association of Cambodia. All rights reserved.</p>
+                <div class="flex gap-6">
                     <a href="#" class="hover:text-gray-400 transition">Privacy Policy</a>
                     <a href="#" class="hover:text-gray-400 transition">Terms of Use</a>
                 </div>
