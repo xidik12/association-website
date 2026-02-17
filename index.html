@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Association of Cambodia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a5f',
+                        secondary: '#2c7be5',
+                        accent: '#f5a623',
+                        dark: '#0f1c2e',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans text-gray-800">
+
+    <!-- Top Bar -->
+    <div class="bg-dark text-white text-sm py-2">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <span><i class="fas fa-envelope mr-1"></i> info@association.org.kh</span>
+                <span><i class="fas fa-phone mr-1"></i> +855 23 XXX XXX</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="#" class="hover:text-accent transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-accent transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hover:text-accent transition"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="hover:text-accent transition"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">PA</span>
+                    </div>
+                    <div>
+                        <div class="font-bold text-primary text-lg leading-tight">Professional Association</div>
+                        <div class="text-xs text-gray-500">of Cambodia</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-1">
+                    <div class="relative group">
+                        <a href="pages/about.html" class="nav-link px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition flex items-center gap-1">
+                            About Us <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown absolute left-0 top-full bg-white shadow-xl rounded-lg py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <a href="pages/about.html" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">About the Association</a>
+                            <a href="pages/board.html" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">Meet Our Board</a>
+                            <a href="pages/team.html" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">Our Team</a>
+                            <a href="pages/charter.html" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">Charter</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="pages/membership.html" class="nav-link px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition flex items-center gap-1">
+                            Membership <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown absolute left-0 top-full bg-white shadow-xl rounded-lg py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <a href="pages/membership.html" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">Become a Member</a>
+                            <a href="pages/membership.html#benefits" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">Benefits & Tiers</a>
+                            <a href="pages/directory.html" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">Member Directory</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="pages/committees.html" class="nav-link px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition flex items-center gap-1">
+                            Committees <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown absolute left-0 top-full bg-white shadow-xl rounded-lg py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <a href="pages/committees.html" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">All Committees</a>
+                            <a href="pages/committees.html#ethics" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">Ethics Committee</a>
+                            <a href="pages/committees.html#education" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">Education Committee</a>
+                            <a href="pages/committees.html#standards" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">Standards Committee</a>
+                        </div>
+                    </div>
+                    <a href="pages/events.html" class="nav-link px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Events</a>
+                    <div class="relative group">
+                        <a href="pages/resources.html" class="nav-link px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition flex items-center gap-1">
+                            Resources <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown absolute left-0 top-full bg-white shadow-xl rounded-lg py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <a href="pages/resources.html" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">Industry Guides</a>
+                            <a href="pages/news.html" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">News & Updates</a>
+                            <a href="pages/resources.html#publications" class="block px-4 py-2 hover:bg-gray-50 text-gray-600 hover:text-primary">Publications</a>
+                        </div>
+                    </div>
+                    <a href="pages/contact.html" class="nav-link px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Contact</a>
+                </div>
+
+                <!-- CTA + Mobile Toggle -->
+                <div class="flex items-center gap-3">
+                    <a href="pages/membership.html" class="hidden md:inline-block bg-accent hover:bg-yellow-500 text-white font-semibold px-6 py-2.5 rounded-lg transition shadow-md">
+                        Join Now
+                    </a>
+                    <button id="mobile-toggle" class="lg:hidden text-2xl text-primary">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-2">
+                <a href="pages/about.html" class="block py-2 text-gray-700 hover:text-primary font-medium">About Us</a>
+                <a href="pages/membership.html" class="block py-2 text-gray-700 hover:text-primary font-medium">Membership</a>
+                <a href="pages/committees.html" class="block py-2 text-gray-700 hover:text-primary font-medium">Committees</a>
+                <a href="pages/events.html" class="block py-2 text-gray-700 hover:text-primary font-medium">Events</a>
+                <a href="pages/resources.html" class="block py-2 text-gray-700 hover:text-primary font-medium">Resources</a>
+                <a href="pages/contact.html" class="block py-2 text-gray-700 hover:text-primary font-medium">Contact</a>
+                <a href="pages/membership.html" class="block bg-accent text-white text-center font-semibold py-3 rounded-lg mt-3">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary via-blue-800 to-dark text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full -translate-y-1/2 translate-x-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-72 h-72 bg-secondary rounded-full translate-y-1/2 -translate-x-1/2"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 py-24 md:py-32 relative z-10">
+            <div class="max-w-3xl">
+                <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-4">Established 2005</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    The Professional Association<br>of Cambodia
+                </h1>
+                <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl">
+                    Empowering professionals, advancing standards, and building a stronger Cambodia through collaboration, education, and advocacy.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="pages/membership.html" class="bg-accent hover:bg-yellow-500 text-white font-semibold px-8 py-3.5 rounded-lg transition shadow-lg text-lg">
+                        Become a Member
+                    </a>
+                    <a href="pages/about.html" class="bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold px-8 py-3.5 rounded-lg transition border border-white/20 text-lg">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="bg-white -mt-8 relative z-20">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="bg-white rounded-2xl shadow-xl grid grid-cols-2 md:grid-cols-4 gap-6 p-8">
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-primary">500+</div>
+                    <div class="text-gray-500 text-sm mt-1">Active Members</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-primary">20+</div>
+                    <div class="text-gray-500 text-sm mt-1">Years of Service</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-primary">50+</div>
+                    <div class="text-gray-500 text-sm mt-1">Events Per Year</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-primary">6</div>
+                    <div class="text-gray-500 text-sm mt-1">Committees</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-3">About Us</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">We Are Here to Support You</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Founded in 2005, the Professional Association of Cambodia is an independent non-profit membership organization dedicated to advancing professional standards and supporting the growth of qualified professionals across the Kingdom.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Our members include leading professionals, organizations, and institutions who share a commitment to excellence, ethical practice, and continuous development. Together, we shape the future of our profession in Cambodia.
+                    </p>
+                    <a href="pages/about.html" class="inline-flex items-center gap-2 text-secondary font-semibold hover:text-primary transition">
+                        Read More About Us <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-6">Our Mission</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Advocacy</h4>
+                                <p class="text-blue-100 text-sm">Represent our members' interests to government and stakeholders</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Education</h4>
+                                <p class="text-blue-100 text-sm">Provide training, workshops, and professional development</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Networking</h4>
+                                <p class="text-blue-100 text-sm">Connect professionals across industries and borders</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Standards</h4>
+                                <p class="text-blue-100 text-sm">Uphold and advance professional ethics and best practices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What's Happening</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary">Upcoming Events</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Event 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div class="h-48 bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center relative">
+                        <i class="fas fa-calendar-check text-6xl text-white/30"></i>
+                        <div class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">Upcoming</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-primary mb-2 group-hover:text-secondary transition">Annual General Meeting 2026</h3>
+                        <div class="flex items-center gap-2 text-gray-500 text-sm mb-1">
+                            <i class="fas fa-calendar-alt"></i> March 15, 2026
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-500 text-sm mb-3">
+                            <i class="fas fa-clock"></i> 5:00 PM - 9:00 PM
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Join us for our annual meeting featuring keynote speakers, board elections, and networking dinner.</p>
+                        <a href="pages/events.html" class="text-secondary font-semibold text-sm hover:text-primary transition">View Event <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Event 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div class="h-48 bg-gradient-to-br from-secondary to-blue-400 flex items-center justify-center relative">
+                        <i class="fas fa-chalkboard-teacher text-6xl text-white/30"></i>
+                        <div class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">Workshop</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-primary mb-2 group-hover:text-secondary transition">Professional Development Workshop</h3>
+                        <div class="flex items-center gap-2 text-gray-500 text-sm mb-1">
+                            <i class="fas fa-calendar-alt"></i> April 5, 2026
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-500 text-sm mb-3">
+                            <i class="fas fa-clock"></i> 9:00 AM - 4:00 PM
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">A full-day workshop on leadership skills, industry trends, and professional certification.</p>
+                        <a href="pages/events.html" class="text-secondary font-semibold text-sm hover:text-primary transition">View Event <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Event 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                    <div class="h-48 bg-gradient-to-br from-accent to-yellow-400 flex items-center justify-center relative">
+                        <i class="fas fa-glass-cheers text-6xl text-white/30"></i>
+                        <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Networking</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-primary mb-2 group-hover:text-secondary transition">Members Networking Evening</h3>
+                        <div class="flex items-center gap-2 text-gray-500 text-sm mb-1">
+                            <i class="fas fa-calendar-alt"></i> April 20, 2026
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-500 text-sm mb-3">
+                            <i class="fas fa-clock"></i> 6:30 PM - 9:00 PM
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">An evening of networking with fellow professionals over drinks and light refreshments.</p>
+                        <a href="pages/events.html" class="text-secondary font-semibold text-sm hover:text-primary transition">View Event <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="pages/events.html" class="inline-flex items-center gap-2 bg-primary hover:bg-dark text-white font-semibold px-8 py-3 rounded-lg transition">
+                    View All Events <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership CTA -->
+    <section class="py-20 bg-gradient-to-br from-primary to-dark text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Join Us</p>
+                <h2 class="text-3xl md:text-4xl font-bold">Become a Member</h2>
+                <p class="text-blue-100 mt-4 max-w-2xl mx-auto">
+                    We offer a variety of membership levels designed to meet the needs of individuals and organizations at every stage.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Individual -->
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/10 hover:bg-white/15 transition">
+                    <div class="text-accent text-sm font-semibold uppercase tracking-wider mb-2">Individual</div>
+                    <div class="text-3xl font-bold mb-1">$100<span class="text-lg font-normal text-blue-200">/year</span></div>
+                    <p class="text-blue-200 text-sm mb-6">For individual professionals</p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Member directory listing</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Event access & discounts</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Newsletter & updates</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Networking opportunities</li>
+                    </ul>
+                    <a href="pages/membership.html" class="block mt-6 text-center bg-white/20 hover:bg-accent text-white font-semibold py-3 rounded-lg transition">
+                        Apply Now
+                    </a>
+                </div>
+                <!-- Corporate -->
+                <div class="bg-white/15 backdrop-blur rounded-2xl p-8 border-2 border-accent relative hover:bg-white/20 transition">
+                    <div class="absolute -top-3 right-6 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">Most Popular</div>
+                    <div class="text-accent text-sm font-semibold uppercase tracking-wider mb-2">Corporate</div>
+                    <div class="text-3xl font-bold mb-1">$500<span class="text-lg font-normal text-blue-200">/year</span></div>
+                    <p class="text-blue-200 text-sm mb-6">For companies & organizations</p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Everything in Individual</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Company profile page</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Committee participation</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Logo on website</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> 3 employee memberships</li>
+                    </ul>
+                    <a href="pages/membership.html" class="block mt-6 text-center bg-accent hover:bg-yellow-500 text-white font-semibold py-3 rounded-lg transition">
+                        Apply Now
+                    </a>
+                </div>
+                <!-- Patron -->
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/10 hover:bg-white/15 transition">
+                    <div class="text-accent text-sm font-semibold uppercase tracking-wider mb-2">Patron</div>
+                    <div class="text-3xl font-bold mb-1">$1,000<span class="text-lg font-normal text-blue-200">/year</span></div>
+                    <p class="text-blue-200 text-sm mb-6">For premium supporters</p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Everything in Corporate</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Board meeting access</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Speaking opportunities</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Premium event seating</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> 10 employee memberships</li>
+                    </ul>
+                    <a href="pages/membership.html" class="block mt-6 text-center bg-white/20 hover:bg-accent text-white font-semibold py-3 rounded-lg transition">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Committees Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Our Work</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary">Advocacy Committees</h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+                    Through our committees, we address key issues affecting our profession and advocate for positive change.
+                </p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="pages/committees.html" class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition group">
+                    <div class="w-14 h-14 bg-blue-100 text-secondary rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-secondary group-hover:text-white transition">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-primary mb-2">Ethics Committee</h3>
+                    <p class="text-gray-500 text-sm">Maintaining professional standards and ethical conduct across the industry.</p>
+                </a>
+                <a href="pages/committees.html" class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition group">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-primary mb-2">Education Committee</h3>
+                    <p class="text-gray-500 text-sm">Developing training programs, workshops, and certification pathways.</p>
+                </a>
+                <a href="pages/committees.html" class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition group">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-purple-600 group-hover:text-white transition">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-primary mb-2">Standards Committee</h3>
+                    <p class="text-gray-500 text-sm">Setting and maintaining industry standards and best practices.</p>
+                </a>
+                <a href="pages/committees.html" class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition group">
+                    <div class="w-14 h-14 bg-red-100 text-red-500 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-red-500 group-hover:text-white transition">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-primary mb-2">Legal & Regulatory</h3>
+                    <p class="text-gray-500 text-sm">Engaging with legislation and regulatory frameworks affecting our field.</p>
+                </a>
+                <a href="pages/committees.html" class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition group">
+                    <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-yellow-600 group-hover:text-white transition">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-primary mb-2">International Relations</h3>
+                    <p class="text-gray-500 text-sm">Building partnerships with international professional bodies and associations.</p>
+                </a>
+                <a href="pages/committees.html" class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition group">
+                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-primary mb-2">Innovation & Technology</h3>
+                    <p class="text-gray-500 text-sm">Embracing new technologies and digital transformation in our profession.</p>
+                </a>
+            </div>
+            <div class="text-center mt-10">
+                <a href="pages/committees.html" class="inline-flex items-center gap-2 text-secondary font-semibold hover:text-primary transition text-lg">
+                    Explore All Committees <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Logo Bar -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Trusted By</p>
+                <h2 class="text-2xl font-bold text-primary">Our Members</h2>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60">
+                <div class="w-32 h-16 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 font-bold">LOGO 1</div>
+                <div class="w-32 h-16 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 font-bold">LOGO 2</div>
+                <div class="w-32 h-16 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 font-bold">LOGO 3</div>
+                <div class="w-32 h-16 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 font-bold">LOGO 4</div>
+                <div class="w-32 h-16 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 font-bold">LOGO 5</div>
+                <div class="w-32 h-16 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 font-bold">LOGO 6</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Stay Informed</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary">Latest News & Updates</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-44 bg-gradient-to-r from-blue-100 to-blue-200 flex items-center justify-center">
+                        <i class="fas fa-newspaper text-5xl text-blue-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-accent font-semibold uppercase mb-2">Industry News</div>
+                        <h3 class="font-bold text-primary mb-2">New Professional Standards Announced for 2026</h3>
+                        <p class="text-gray-500 text-sm mb-3">The association has released updated guidelines for professional practice in Cambodia...</p>
+                        <div class="text-gray-400 text-xs">February 10, 2026</div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-44 bg-gradient-to-r from-green-100 to-green-200 flex items-center justify-center">
+                        <i class="fas fa-handshake text-5xl text-green-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-accent font-semibold uppercase mb-2">Partnership</div>
+                        <h3 class="font-bold text-primary mb-2">MOU Signed with International Partner Organization</h3>
+                        <p class="text-gray-500 text-sm mb-3">A new memorandum of understanding will open doors for cross-border collaboration...</p>
+                        <div class="text-gray-400 text-xs">February 5, 2026</div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-44 bg-gradient-to-r from-purple-100 to-purple-200 flex items-center justify-center">
+                        <i class="fas fa-award text-5xl text-purple-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-accent font-semibold uppercase mb-2">Awards</div>
+                        <h3 class="font-bold text-primary mb-2">Excellence Awards Nominations Now Open</h3>
+                        <p class="text-gray-500 text-sm mb-3">Nominate outstanding professionals who have made significant contributions to the field...</p>
+                        <div class="text-gray-400 text-xs">January 28, 2026</div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-4 gap-10">
+                <!-- About -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">PA</span>
+                        </div>
+                        <div class="font-bold text-lg">Professional Association</div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Empowering professionals and advancing standards in Cambodia since 2005.
+                    </p>
+                    <div class="flex gap-3 mt-4">
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="pages/about.html" class="hover:text-accent transition">About Us</a></li>
+                        <li><a href="pages/membership.html" class="hover:text-accent transition">Become a Member</a></li>
+                        <li><a href="pages/events.html" class="hover:text-accent transition">Events</a></li>
+                        <li><a href="pages/committees.html" class="hover:text-accent transition">Committees</a></li>
+                        <li><a href="pages/resources.html" class="hover:text-accent transition">Resources</a></li>
+                    </ul>
+                </div>
+                <!-- Resources -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="pages/news.html" class="hover:text-accent transition">News & Updates</a></li>
+                        <li><a href="pages/resources.html" class="hover:text-accent transition">Industry Guides</a></li>
+                        <li><a href="pages/directory.html" class="hover:text-accent transition">Member Directory</a></li>
+                        <li><a href="pages/resources.html#publications" class="hover:text-accent transition">Publications</a></li>
+                        <li><a href="#" class="hover:text-accent transition">FAQs</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-accent"></i>
+                            <span>#123 Street Name, Sangkat,<br>Khan, Phnom Penh, Cambodia</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone text-accent"></i>
+                            <span>+855 23 XXX XXX</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-accent"></i>
+                            <span>info@association.org.kh</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 Professional Association of Cambodia. All rights reserved.</p>
+                <div class="flex gap-4 mt-2 md:mt-0">
+                    <a href="#" class="hover:text-accent transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-accent transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

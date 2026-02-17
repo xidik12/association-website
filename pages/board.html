@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Board - Professional Association of Cambodia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#1e3a5f', secondary: '#2c7be5', accent: '#f5a623', dark: '#0f1c2e' }, fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+        }
+    </script>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="font-sans text-gray-800">
+
+    <!-- Top Bar -->
+    <div class="bg-dark text-white text-sm py-2">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <span><i class="fas fa-envelope mr-1"></i> info@association.org.kh</span>
+                <span><i class="fas fa-phone mr-1"></i> +855 23 XXX XXX</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="#" class="hover:text-accent transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-accent transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hover:text-accent transition"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-xl">PA</span></div>
+                    <div><div class="font-bold text-primary text-lg leading-tight">Professional Association</div><div class="text-xs text-gray-500">of Cambodia</div></div>
+                </a>
+                <div class="hidden lg:flex items-center gap-1">
+                    <a href="about.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-primary transition">About Us</a>
+                    <a href="membership.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Membership</a>
+                    <a href="committees.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Committees</a>
+                    <a href="events.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Events</a>
+                    <a href="resources.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Resources</a>
+                    <a href="contact.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Contact</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="membership.html" class="hidden md:inline-block bg-accent hover:bg-yellow-500 text-white font-semibold px-6 py-2.5 rounded-lg transition shadow-md">Join Now</a>
+                    <button id="mobile-toggle" class="lg:hidden text-2xl text-primary"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-2">
+                <a href="about.html" class="block py-2 text-gray-700 font-medium">About Us</a>
+                <a href="membership.html" class="block py-2 text-gray-700 font-medium">Membership</a>
+                <a href="committees.html" class="block py-2 text-gray-700 font-medium">Committees</a>
+                <a href="events.html" class="block py-2 text-gray-700 font-medium">Events</a>
+                <a href="resources.html" class="block py-2 text-gray-700 font-medium">Resources</a>
+                <a href="contact.html" class="block py-2 text-gray-700 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header text-white">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-2">Leadership</p>
+            <h1 class="text-4xl md:text-5xl font-bold">Meet Our Board</h1>
+            <p class="text-blue-200 mt-3 max-w-xl">The dedicated professionals leading our association forward.</p>
+        </div>
+    </section>
+
+    <!-- Board Members -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- President -->
+            <div class="text-center mb-16">
+                <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-8">Board of Directors</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Member 1 - President -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover text-center">
+                    <div class="h-56 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-5xl text-white/60"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-accent font-semibold uppercase tracking-wider mb-1">President</div>
+                        <h3 class="text-xl font-bold text-primary">Dr. [Name]</h3>
+                        <p class="text-gray-500 text-sm mt-1">[Title / Organization]</p>
+                        <p class="text-gray-400 text-sm mt-3">Leading the association's strategic vision and overseeing all board activities.</p>
+                        <div class="flex justify-center gap-3 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-secondary"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-secondary"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 2 - Vice President -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover text-center">
+                    <div class="h-56 bg-gradient-to-br from-secondary to-blue-400 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-5xl text-white/60"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-accent font-semibold uppercase tracking-wider mb-1">Vice President</div>
+                        <h3 class="text-xl font-bold text-primary">[Name]</h3>
+                        <p class="text-gray-500 text-sm mt-1">[Title / Organization]</p>
+                        <p class="text-gray-400 text-sm mt-3">Supporting the president and leading key advocacy initiatives.</p>
+                        <div class="flex justify-center gap-3 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-secondary"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-secondary"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 3 - Secretary -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover text-center">
+                    <div class="h-56 bg-gradient-to-br from-accent to-yellow-400 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-5xl text-white/60"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-accent font-semibold uppercase tracking-wider mb-1">Secretary General</div>
+                        <h3 class="text-xl font-bold text-primary">[Name]</h3>
+                        <p class="text-gray-500 text-sm mt-1">[Title / Organization]</p>
+                        <p class="text-gray-400 text-sm mt-3">Managing organizational communications and record-keeping.</p>
+                        <div class="flex justify-center gap-3 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-secondary"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-secondary"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 4 - Treasurer -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover text-center">
+                    <div class="h-56 bg-gradient-to-br from-green-600 to-green-400 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-5xl text-white/60"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-accent font-semibold uppercase tracking-wider mb-1">Treasurer</div>
+                        <h3 class="text-xl font-bold text-primary">[Name]</h3>
+                        <p class="text-gray-500 text-sm mt-1">[Title / Organization]</p>
+                        <p class="text-gray-400 text-sm mt-3">Overseeing financial management and budgeting.</p>
+                        <div class="flex justify-center gap-3 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-secondary"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-secondary"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover text-center">
+                    <div class="h-56 bg-gradient-to-br from-purple-600 to-purple-400 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-5xl text-white/60"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-accent font-semibold uppercase tracking-wider mb-1">Board Member</div>
+                        <h3 class="text-xl font-bold text-primary">[Name]</h3>
+                        <p class="text-gray-500 text-sm mt-1">[Title / Organization]</p>
+                        <p class="text-gray-400 text-sm mt-3">Contributing expertise in policy and regulatory affairs.</p>
+                        <div class="flex justify-center gap-3 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-secondary"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-secondary"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 6 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover text-center">
+                    <div class="h-56 bg-gradient-to-br from-red-500 to-red-400 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-5xl text-white/60"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-accent font-semibold uppercase tracking-wider mb-1">Board Member</div>
+                        <h3 class="text-xl font-bold text-primary">[Name]</h3>
+                        <p class="text-gray-500 text-sm mt-1">[Title / Organization]</p>
+                        <p class="text-gray-400 text-sm mt-3">Bringing international experience and industry connections.</p>
+                        <div class="flex justify-center gap-3 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-secondary"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-secondary"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold">PA</span></div>
+                        <div class="font-bold text-lg">Professional Association</div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Empowering professionals and advancing standards in Cambodia since 2005.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="about.html" class="hover:text-accent transition">About Us</a></li>
+                        <li><a href="membership.html" class="hover:text-accent transition">Membership</a></li>
+                        <li><a href="events.html" class="hover:text-accent transition">Events</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="resources.html" class="hover:text-accent transition">Industry Guides</a></li>
+                        <li><a href="directory.html" class="hover:text-accent transition">Member Directory</a></li>
+                        <li><a href="news.html" class="hover:text-accent transition">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><i class="fas fa-map-marker-alt text-accent mr-2"></i> Phnom Penh, Cambodia</li>
+                        <li><i class="fas fa-phone text-accent mr-2"></i> +855 23 XXX XXX</li>
+                        <li><i class="fas fa-envelope text-accent mr-2"></i> info@association.org.kh</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 py-6 text-center text-gray-500 text-sm">
+                &copy; 2026 Professional Association of Cambodia. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

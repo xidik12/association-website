@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Directory - Professional Association of Cambodia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#1e3a5f', secondary: '#2c7be5', accent: '#f5a623', dark: '#0f1c2e' }, fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+        }
+    </script>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="font-sans text-gray-800">
+
+    <!-- Top Bar -->
+    <div class="bg-dark text-white text-sm py-2">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <span><i class="fas fa-envelope mr-1"></i> info@association.org.kh</span>
+                <span><i class="fas fa-phone mr-1"></i> +855 23 XXX XXX</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="#" class="hover:text-accent transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-accent transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hover:text-accent transition"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-xl">PA</span></div>
+                    <div><div class="font-bold text-primary text-lg leading-tight">Professional Association</div><div class="text-xs text-gray-500">of Cambodia</div></div>
+                </a>
+                <div class="hidden lg:flex items-center gap-1">
+                    <a href="about.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">About Us</a>
+                    <a href="membership.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-primary transition">Membership</a>
+                    <a href="committees.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Committees</a>
+                    <a href="events.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Events</a>
+                    <a href="resources.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Resources</a>
+                    <a href="contact.html" class="px-4 py-2 rounded-md hover:bg-gray-100 font-medium text-gray-700 hover:text-primary transition">Contact</a>
+                </div>
+                <a href="membership.html" class="hidden md:inline-block bg-accent hover:bg-yellow-500 text-white font-semibold px-6 py-2.5 rounded-lg transition shadow-md">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header text-white">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-2">Our Members</p>
+            <h1 class="text-4xl md:text-5xl font-bold">Member Directory</h1>
+            <p class="text-blue-200 mt-3 max-w-xl">Browse our directory of registered member organizations and professionals.</p>
+        </div>
+    </section>
+
+    <!-- Search & Filter -->
+    <section class="py-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-white rounded-xl shadow-md p-6 flex flex-col md:flex-row gap-4">
+                <div class="flex-1 relative">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" placeholder="Search members by name or organization..." class="form-input pl-11">
+                </div>
+                <select class="form-input md:w-48">
+                    <option>All Categories</option>
+                    <option>Corporate</option>
+                    <option>Individual</option>
+                    <option>Patron</option>
+                </select>
+                <select class="form-input md:w-48">
+                    <option>All Industries</option>
+                    <option>Healthcare</option>
+                    <option>Technology</option>
+                    <option>Finance</option>
+                    <option>Education</option>
+                    <option>Legal</option>
+                </select>
+                <button class="bg-secondary hover:bg-primary text-white font-semibold px-6 py-3 rounded-lg transition">
+                    <i class="fas fa-search mr-2"></i>Search
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Directory Grid -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-gray-500 mb-6">Showing <strong>12</strong> of <strong>500+</strong> members</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Sample Member Cards -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover text-center">
+                    <div class="w-20 h-20 bg-gray-200 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-building text-3xl text-gray-400"></i>
+                    </div>
+                    <h3 class="font-bold text-primary">[Company Name]</h3>
+                    <p class="text-sm text-gray-500 mt-1">Healthcare</p>
+                    <span class="inline-block bg-blue-100 text-secondary text-xs font-semibold px-3 py-1 rounded-full mt-2">Corporate</span>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover text-center">
+                    <div class="w-20 h-20 bg-gray-200 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-building text-3xl text-gray-400"></i>
+                    </div>
+                    <h3 class="font-bold text-primary">[Company Name]</h3>
+                    <p class="text-sm text-gray-500 mt-1">Technology</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-700 text-xs font-semibold px-3 py-1 rounded-full mt-2">Patron</span>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover text-center">
+                    <div class="w-20 h-20 bg-gray-200 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-3xl text-gray-400"></i>
+                    </div>
+                    <h3 class="font-bold text-primary">[Member Name]</h3>
+                    <p class="text-sm text-gray-500 mt-1">Finance</p>
+                    <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mt-2">Individual</span>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover text-center">
+                    <div class="w-20 h-20 bg-gray-200 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-building text-3xl text-gray-400"></i>
+                    </div>
+                    <h3 class="font-bold text-primary">[Company Name]</h3>
+                    <p class="text-sm text-gray-500 mt-1">Education</p>
+                    <span class="inline-block bg-blue-100 text-secondary text-xs font-semibold px-3 py-1 rounded-full mt-2">Corporate</span>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover text-center">
+                    <div class="w-20 h-20 bg-gray-200 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-building text-3xl text-gray-400"></i>
+                    </div>
+                    <h3 class="font-bold text-primary">[Company Name]</h3>
+                    <p class="text-sm text-gray-500 mt-1">Legal</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-700 text-xs font-semibold px-3 py-1 rounded-full mt-2">Patron</span>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover text-center">
+                    <div class="w-20 h-20 bg-gray-200 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-3xl text-gray-400"></i>
+                    </div>
+                    <h3 class="font-bold text-primary">[Member Name]</h3>
+                    <p class="text-sm text-gray-500 mt-1">Healthcare</p>
+                    <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mt-2">Individual</span>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover text-center">
+                    <div class="w-20 h-20 bg-gray-200 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-building text-3xl text-gray-400"></i>
+                    </div>
+                    <h3 class="font-bold text-primary">[Company Name]</h3>
+                    <p class="text-sm text-gray-500 mt-1">Construction</p>
+                    <span class="inline-block bg-blue-100 text-secondary text-xs font-semibold px-3 py-1 rounded-full mt-2">Corporate</span>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover text-center">
+                    <div class="w-20 h-20 bg-gray-200 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-3xl text-gray-400"></i>
+                    </div>
+                    <h3 class="font-bold text-primary">[Member Name]</h3>
+                    <p class="text-sm text-gray-500 mt-1">Technology</p>
+                    <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mt-2">Individual</span>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center items-center gap-2 mt-12">
+                <button class="w-10 h-10 rounded-lg bg-gray-100 text-gray-400 flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+                <button class="w-10 h-10 rounded-lg bg-secondary text-white flex items-center justify-center font-semibold">1</button>
+                <button class="w-10 h-10 rounded-lg bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200">2</button>
+                <button class="w-10 h-10 rounded-lg bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200">3</button>
+                <span class="text-gray-400">...</span>
+                <button class="w-10 h-10 rounded-lg bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200">42</button>
+                <button class="w-10 h-10 rounded-lg bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold">PA</span></div>
+                        <div class="font-bold text-lg">Professional Association</div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Empowering professionals and advancing standards in Cambodia since 2005.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="about.html" class="hover:text-accent transition">About Us</a></li>
+                        <li><a href="membership.html" class="hover:text-accent transition">Membership</a></li>
+                        <li><a href="events.html" class="hover:text-accent transition">Events</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="resources.html" class="hover:text-accent transition">Industry Guides</a></li>
+                        <li><a href="news.html" class="hover:text-accent transition">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><i class="fas fa-map-marker-alt text-accent mr-2"></i> Phnom Penh, Cambodia</li>
+                        <li><i class="fas fa-phone text-accent mr-2"></i> +855 23 XXX XXX</li>
+                        <li><i class="fas fa-envelope text-accent mr-2"></i> info@association.org.kh</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 py-6 text-center text-gray-500 text-sm">&copy; 2026 Professional Association of Cambodia. All rights reserved.</div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
