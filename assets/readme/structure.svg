@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="392" viewBox="0 0 1200 392"
+     role="img" aria-labelledby="mapTitle mapDesc">
+  <title id="mapTitle">Site map of the association website</title>
+  <desc id="mapDesc">Twelve pages organised under one navigation. The home page links to seven top-level sections: About (with About, Board of Directors, Leadership Team and Charter and Governance), Membership (with Become a Member and Member Directory), Events, Advocacy, Resources, News and Contact.</desc>
+
+  <rect width="1200" height="392" rx="16" fill="#f8f9fb"/>
+  <rect x="0" y="0" width="1200" height="4" fill="#c19a3e"/>
+
+  <!-- heading -->
+  <text x="48" y="52" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="3.4" fill="#c19a3e">SITE MAP</text>
+  <text x="48" y="84" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#0c2340">12 pages under one navigation</text>
+
+  <!-- home root -->
+  <rect x="48" y="112" width="150" height="40" fill="#0c2340"/>
+  <text x="66" y="137" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#ffffff">index.html</text>
+  <text x="206" y="137" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#8a97a8">Home &#183; hero, stats, events, members</text>
+
+  <!-- section columns -->
+  <!-- x starts at 56, each column 150 wide, 8 gap -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+
+    <!-- 1 About -->
+    <g transform="translate(56 196)">
+      <rect x="0" y="0" width="150" height="30" fill="#0c2340"/>
+      <text x="12" y="20" font-size="12" font-weight="600" fill="#ffffff">About</text>
+      <g font-size="11" fill="#334966">
+        <rect x="0" y="40" width="150" height="26" fill="#ffffff" stroke="#e2e6ec"/><rect x="0" y="40" width="3" height="26" fill="#c19a3e"/><text x="12" y="57">About the Association</text>
+        <rect x="0" y="70" width="150" height="26" fill="#ffffff" stroke="#e2e6ec"/><rect x="0" y="70" width="3" height="26" fill="#c19a3e"/><text x="12" y="87">Board of Directors</text>
+        <rect x="0" y="100" width="150" height="26" fill="#ffffff" stroke="#e2e6ec"/><rect x="0" y="100" width="3" height="26" fill="#c19a3e"/><text x="12" y="117">Leadership Team</text>
+        <rect x="0" y="130" width="150" height="26" fill="#ffffff" stroke="#e2e6ec"/><rect x="0" y="130" width="3" height="26" fill="#c19a3e"/><text x="12" y="147">Charter &amp; Governance</text>
+      </g>
+    </g>
+
+    <!-- 2 Membership -->
+    <g transform="translate(214 196)">
+      <rect x="0" y="0" width="150" height="30" fill="#0c2340"/>
+      <text x="12" y="20" font-size="12" font-weight="600" fill="#ffffff">Membership</text>
+      <g font-size="11" fill="#334966">
+        <rect x="0" y="40" width="150" height="26" fill="#ffffff" stroke="#e2e6ec"/><rect x="0" y="40" width="3" height="26" fill="#c19a3e"/><text x="12" y="57">Become a Member</text>
+        <rect x="0" y="70" width="150" height="26" fill="#ffffff" stroke="#e2e6ec"/><rect x="0" y="70" width="3" height="26" fill="#c19a3e"/><text x="12" y="87">Member Directory</text>
+      </g>
+    </g>
+
+    <!-- 3 Events -->
+    <g transform="translate(372 196)">
+      <rect x="0" y="0" width="150" height="30" fill="#0c2340"/>
+      <text x="12" y="20" font-size="12" font-weight="600" fill="#ffffff">Events</text>
+      <rect x="0" y="40" width="150" height="26" fill="#ffffff" stroke="#e2e6ec"/><rect x="0" y="40" width="3" height="26" fill="#c19a3e"/><text x="12" y="57" font-size="11" fill="#334966">Programme &amp; calendar</text>
+    </g>
+
+    <!-- 4 Advocacy -->
+    <g transform="translate(530 196)">
+      <rect x="0" y="0" width="150" height="30" fill="#0c2340"/>
+      <text x="12" y="20" font-size="12" font-weight="600" fill="#ffffff">Advocacy</text>
+      <rect x="0" y="40" width="150" height="26" fill="#ffffff" stroke="#e2e6ec"/><rect x="0" y="40" width="3" height="26" fill="#c19a3e"/><text x="12" y="57" font-size="11" fill="#334966">Committees</text>
+    </g>
+
+    <!-- 5 Resources -->
+    <g transform="translate(688 196)">
+      <rect x="0" y="0" width="150" height="30" fill="#0c2340"/>
+      <text x="12" y="20" font-size="12" font-weight="600" fill="#ffffff">Resources</text>
+      <rect x="0" y="40" width="150" height="26" fill="#ffffff" stroke="#e2e6ec"/><rect x="0" y="40" width="3" height="26" fill="#c19a3e"/><text x="12" y="57" font-size="11" fill="#334966">Guides &amp; downloads</text>
+    </g>
+
+    <!-- 6 News -->
+    <g transform="translate(846 196)">
+      <rect x="0" y="0" width="150" height="30" fill="#0c2340"/>
+      <text x="12" y="20" font-size="12" font-weight="600" fill="#ffffff">News</text>
+      <rect x="0" y="40" width="150" height="26" fill="#ffffff" stroke="#e2e6ec"/><rect x="0" y="40" width="3" height="26" fill="#c19a3e"/><text x="12" y="57" font-size="11" fill="#334966">News &amp; updates</text>
+    </g>
+
+    <!-- 7 Contact -->
+    <g transform="translate(1004 196)">
+      <rect x="0" y="0" width="150" height="30" fill="#0c2340"/>
+      <text x="12" y="20" font-size="12" font-weight="600" fill="#ffffff">Contact</text>
+      <rect x="0" y="40" width="150" height="26" fill="#ffffff" stroke="#e2e6ec"/><rect x="0" y="40" width="3" height="26" fill="#c19a3e"/><text x="12" y="57" font-size="11" fill="#334966">Enquiry form &amp; map</text>
+    </g>
+  </g>
+
+  <!-- connector rail from home to columns -->
+  <path d="M123 152 L123 180 L1079 180" fill="none" stroke="#c9d2de" stroke-width="1.5"/>
+  <g fill="#c9d2de">
+    <rect x="130" y="180" width="1.5" height="16"/>
+    <rect x="288" y="180" width="1.5" height="16"/>
+    <rect x="446" y="180" width="1.5" height="16"/>
+    <rect x="604" y="180" width="1.5" height="16"/>
+    <rect x="762" y="180" width="1.5" height="16"/>
+    <rect x="920" y="180" width="1.5" height="16"/>
+    <rect x="1078" y="180" width="1.5" height="16"/>
+  </g>
+</svg>
